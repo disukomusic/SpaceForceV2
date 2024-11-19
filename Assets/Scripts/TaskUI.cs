@@ -19,6 +19,7 @@ public class TaskUI : MonoBehaviour
         _taskQueueText.text = FormatTaskQueue();
     }
 
+    //todo: everything is currently formatted into a string. it should be separate TMP objects in the scene.
     string FormatTaskQueue()
     {
         // Create a list to hold formatted descriptions

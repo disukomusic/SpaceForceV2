@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af97c416fc804837863068a170c7f88f, type: 3}
-  m_Name: Joystick Left
+  m_Name: Joystick Up
   m_EditorClassIdentifier: 
   taskName: Joystick
-  taskDescription: Joystick to the Left
-  taskCompleteCondition: joystickLeft
+  taskDescription: Joystick to the Up
+  taskCompleteCondition: joystickUp
