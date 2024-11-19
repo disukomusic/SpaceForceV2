@@ -18,6 +18,6 @@ public class TaskManager : MonoBehaviour
     public void AssignTask(int panelIndex, int taskIndex)
     {
         panels[panelIndex].taskQueue.Add(tasks[taskIndex]);
-        Debug.Log($"assigned task {tasks[taskIndex].taskName} to panel {panels[panelIndex]}.name" );
+        Debug.Log($"assigned task {tasks[taskIndex].taskName} to panel {panels[panelIndex].gameObject.name}" );
     }
 }

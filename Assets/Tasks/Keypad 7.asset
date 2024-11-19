@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af97c416fc804837863068a170c7f88f, type: 3}
-  m_Name: Keypad
+  m_Name: Keypad 7
   m_EditorClassIdentifier: 
-  taskName: Keypad
-  taskDescription: Type in the Keypad
-  taskCompleteCondition: keypad
+  taskName: Keypad 7
+  taskDescription: Type "7" on the keypad.
+  taskCompleteCondition: keypad7
