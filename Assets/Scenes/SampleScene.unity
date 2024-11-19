@@ -275,7 +275,12 @@ MonoBehaviour:
   - {fileID: 2056861670}
   - {fileID: 1317317868}
   tasks:
-  - {fileID: 11400000, guid: c2e165d7160296241b1ef5476054418e, type: 2}
+  - {fileID: 11400000, guid: 5079f338313493b47934868a26b20085, type: 2}
+  - {fileID: 11400000, guid: be0f661cd7b1b0342bd1dac11e35cae6, type: 2}
+  - {fileID: 11400000, guid: 45cef05984d07844bb885a2d185f7a2e, type: 2}
+  - {fileID: 11400000, guid: 141703c421180944db64b09ea1980e67, type: 2}
+  - {fileID: 11400000, guid: 9aa2b10ad49bbc24e99d0ccef5b0a0ed, type: 2}
+  - {fileID: 11400000, guid: bff15169c0e4c2941a0b509825140af2, type: 2}
 --- !u!1 &489418911
 GameObject:
   m_ObjectHideFlags: 0
