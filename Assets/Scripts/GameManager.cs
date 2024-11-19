@@ -6,9 +6,23 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isPlaying;
     private void Start()
     {
-        TaskManager.Instance.AssignTask(0, Random.Range(0, TaskManager.Instance.tasks.Length));
+        isPlaying = true;
+        StartCoroutine(GameLoop());
     }
-    
+
+    IEnumerator GameLoop()
+    {
+        while (isPlaying)
+        {
+            TaskManager.Instance.AssignTask(0, Random.Range(0, TaskManager.Instance.tasks.Length));
+            yield return new WaitForSeconds(5f);
+            TaskManager.Instance.AssignTask(1, Random.Range(0, TaskManager.Instance.tasks.Length));
+            yield return new WaitForSeconds(5f);
+            TaskManager.Instance.AssignTask(2, Random.Range(0, TaskManager.Instance.tasks.Length));
+            yield return new WaitForSeconds(5f);
+        }   
+    }
 }
