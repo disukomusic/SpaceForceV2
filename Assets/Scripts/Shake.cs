@@ -12,10 +12,10 @@ public class Shake : MonoBehaviour
     void Start()
     {
         originalPosition = transform.position;
-        StartCoroutine(Shake());
+        StartCoroutine(ShakeAnim());
     }
 
-    System.Collections.IEnumerator Shake()
+    IEnumerator ShakeAnim()
     {
         float elapsed = 0f;
 
