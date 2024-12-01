@@ -12,6 +12,10 @@ public class Shake : MonoBehaviour
     void Start()
     {
         originalPosition = transform.position;
+    }
+
+    public void DoShake()
+    {
         StartCoroutine(ShakeAnim());
     }
 
