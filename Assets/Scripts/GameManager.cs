@@ -18,11 +18,12 @@ public class GameManager : MonoBehaviour
         while (isPlaying)
         {
             TaskManager.Instance.AssignTask(0, Random.Range(0, TaskManager.Instance.tasks.Length));
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             TaskManager.Instance.AssignTask(1, Random.Range(0, TaskManager.Instance.tasks.Length));
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             TaskManager.Instance.AssignTask(2, Random.Range(0, TaskManager.Instance.tasks.Length));
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
+            
         }   
     }
 }
