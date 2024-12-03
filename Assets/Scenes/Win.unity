@@ -334,8 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d6a89dbf5fbad4bb040533cb0aa6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerDuration: 5
-  nextSceneName: Play
+  timerDuration: 30
+  nextSceneName: Start
 --- !u!4 &1094368872
 Transform:
   m_ObjectHideFlags: 0
