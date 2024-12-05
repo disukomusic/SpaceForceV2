@@ -15,3 +15,5 @@ MonoBehaviour:
   taskName: Joystick
   taskDescription: Joystick to the Right
   taskCompleteCondition: joystickRight
+  taskTime: 10
+  taskDamage: 10

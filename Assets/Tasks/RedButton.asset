@@ -15,3 +15,5 @@ MonoBehaviour:
   taskName: Yellow Button
   taskDescription: Press YELLOW Button
   taskCompleteCondition: yellowButton
+  taskTime: 10
+  taskDamage: 10

@@ -7,5 +7,6 @@ public class Task : ScriptableObject
     public string taskName;
     public string taskDescription;
     public string taskCompleteCondition;
-
+    public float taskTime;
+    public float taskDamage;
 }

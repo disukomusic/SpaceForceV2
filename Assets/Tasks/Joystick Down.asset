@@ -15,3 +15,5 @@ MonoBehaviour:
   taskName: Joystick
   taskDescription: Joystick to the Down
   taskCompleteCondition: joystickDown
+  taskTime: 10
+  taskDamage: 10

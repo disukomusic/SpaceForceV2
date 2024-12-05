@@ -15,3 +15,5 @@ MonoBehaviour:
   taskName: Green Button
   taskDescription: Press GREEN Button
   taskCompleteCondition: greenButton
+  taskTime: 10
+  taskDamage: 10

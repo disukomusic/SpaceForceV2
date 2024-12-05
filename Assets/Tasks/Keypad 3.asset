@@ -15,3 +15,5 @@ MonoBehaviour:
   taskName: Keypad 3
   taskDescription: Type "3" on the keypad.
   taskCompleteCondition: keypad3
+  taskTime: 10
+  taskDamage: 10

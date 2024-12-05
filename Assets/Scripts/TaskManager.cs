@@ -33,7 +33,7 @@ public class TaskManager : MonoBehaviour
 
         // Assign the correct task name to the prefab's text
         TaskContainer taskContainer = taskObject.GetComponent<TaskContainer>();
-        taskContainer.SetTask(task.taskDescription);
+        taskContainer.SetTask(task, task.taskDescription, task.taskTime, task.taskDamage);
 
         // Map the task to its prefab instance
         taskPrefabMap[task] = taskObject;
@@ -48,6 +48,27 @@ public class TaskManager : MonoBehaviour
         {
             Destroy(taskObject); // Remove the prefab
             taskPrefabMap.Remove(task); // Clean up the dictionary
+        }
+    }
+
+    public void HandleTaskFailure(Task task)
+    {
+        if (taskPrefabMap.TryGetValue(task, out GameObject taskObject))
+        {
+            Destroy(taskObject); // Remove the task's GameObject
+            taskPrefabMap.Remove(task); // Clean up the dictionary
+
+            // Find the panel containing the task and remove it from the queue.
+            foreach (PanelManager panel in panels)
+            {
+                if (panel.taskQueue.Contains(task))
+                {
+                    panel.taskQueue.Remove(task);
+                    Debug.Log($"Task failed: {task.taskName}");
+                    GameManager.Instance.shipHealth -= task.taskDamage;
+                    break;
+                }
+            }
         }
     }
 }
