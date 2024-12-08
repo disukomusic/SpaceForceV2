@@ -33,9 +33,9 @@ public class TaskContainer : MonoBehaviour
 
         if (t >= taskDurationValue)
         {
-            Destroy(gameObject);
             // Notify TaskManager about the task failure and clean up.
-            TaskManager.Instance.HandleTaskFailure(associatedTask);
+            TaskManager.Instance.FailTaskPrefab(associatedTask);
+            Destroy(gameObject);
         }
     }
 }

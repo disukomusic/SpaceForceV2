@@ -9,10 +9,16 @@ public class GameManager : MonoBehaviour
 {
     public bool isPlaying;
     public float shipHealth;
+    public float score;
+    public PlayerData playerData;
 
     public static GameManager Instance;
 
     public RectTransform[] shipHealthBars;
+
+    public AudioSource lowHealthSound;
+
+    private bool _alarmPlaying;
 
     private void Awake()
     {
@@ -37,12 +43,32 @@ public class GameManager : MonoBehaviour
             sizeDelta.x = newWidth;
             i.sizeDelta = sizeDelta;
         }
-        
+
+        if (shipHealth <= 20 && !_alarmPlaying)
+        {
+            LowHealthSound();
+        }
         if (shipHealth <= 0)
         {
-            Debug.Log("Game Over");
-            isPlaying = false;
+            GameOver();
         }
+    }
+    
+    
+    private void GameOver()
+    {
+        Debug.Log("Game Over");
+        isPlaying = false;
+
+        // Save the score to the PlayerData scriptable object
+        if (playerData != null)
+        {
+            playerData.score = score; // Convert float to int if needed
+            Debug.Log("Score saved to PlayerData: " + playerData.score);
+        }
+
+        // Optionally, load another scene or restart the game
+        SceneManager.LoadScene("EndScreen");
     }
 
     IEnumerator GameLoop()
@@ -52,10 +78,16 @@ public class GameManager : MonoBehaviour
             TaskManager.Instance.AssignTask(0, Random.Range(0, TaskManager.Instance.tasks.Length));
             yield return new WaitForSeconds(1f);
             TaskManager.Instance.AssignTask(1, Random.Range(0, TaskManager.Instance.tasks.Length));
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             TaskManager.Instance.AssignTask(2, Random.Range(0, TaskManager.Instance.tasks.Length));
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
         }   
+    }
+
+    void LowHealthSound()
+    {
+        lowHealthSound.Play();
+        _alarmPlaying = true;
     }
 
     /// <summary>

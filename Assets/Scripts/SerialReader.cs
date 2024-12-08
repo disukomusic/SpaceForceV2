@@ -1,32 +1,47 @@
-using System;
-using System.IO.Ports; 
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
-public class SerialReader : MonoBehaviour 
-{ 
-    SerialPort sp = new SerialPort("COM9", 9600); 
-    public float speed = 5.0f; 
-    
+public class SerialReader : MonoBehaviour
+{
+    public bool endScreen;
     public PanelManager[] panelManagers;
 
-    void Start() 
-    { 
-        sp.Open();
-        sp.ReadTimeout = 1; 
-    } 
-    void Update() 
-    { 
-        if (sp.IsOpen) 
-        { 
-            try 
-            { 
-                string data = sp.ReadLine();
-                Debug.Log(data);
-                PassDataToPanels(data);
-            } 
-            catch (System.Exception) { } 
-        } 
+    void Start()
+    {
+        if (SerialManager.Instance != null)
+        {
+            SerialManager.Instance.OnDataReceived += HandleData;
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (SerialManager.Instance != null)
+        {
+            SerialManager.Instance.OnDataReceived -= HandleData;
+        }
+    }
+
+    void HandleData(string data)
+    {
+        Debug.Log("Received: " + data);
+
+        if (!endScreen)
+        {
+            PassDataToPanels(data);
+        }
+        else if (data == "greenButton")
+        {
+            Debug.Log("Green button pressed, waiting for transition.");
+            StartCoroutine(WaitAndLoadScene());
+        }
+    }
+    
+    IEnumerator WaitAndLoadScene()
+    {
+        yield return new WaitForSeconds(1f); // Wait for 1 second before loading the scene
+        SceneManager.LoadScene("Play Multi Monitor");
     }
 
     void PassDataToPanels(string data)
@@ -34,7 +49,7 @@ public class SerialReader : MonoBehaviour
         foreach (PanelManager panel in panelManagers)
         {
             panel.CheckTaskCompletion(data);
-            Debug.Log("Passed" + data + " to " + panel.gameObject.name);
+            Debug.Log("Passed " + data + " to " + panel.gameObject.name);
         }
     }
 }

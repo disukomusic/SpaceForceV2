@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PanelManager : MonoBehaviour
@@ -9,6 +10,8 @@ public class PanelManager : MonoBehaviour
     public List<Task> completedTasks = new List<Task>();
 
     public GameObject taskQueuePanel;
+    
+
 
     public void CheckTaskCompletion(string input)
     {
@@ -21,7 +24,7 @@ public class PanelManager : MonoBehaviour
                 taskQueue.RemoveAt(i);
 
                 // Notify TaskManager to remove the prefab
-                TaskManager.Instance.RemoveTaskPrefab(task);
+                TaskManager.Instance.CompleteTaskPrefab(task);
 
                 Debug.Log($"Task completed: {task.taskName}");
             }
