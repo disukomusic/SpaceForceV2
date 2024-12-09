@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spinner Right
   m_EditorClassIdentifier: 
   taskName: Spinnner
-  taskDescription: Spin the Time Warp Wizzer CounterClockwise
+  taskDescription: Spin Time Warp Wizzer CounterClockwise
   taskCompleteCondition: spinnerRight
   taskTime: 10
   taskDamage: 10
