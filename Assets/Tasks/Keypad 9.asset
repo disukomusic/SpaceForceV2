@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 9
   m_EditorClassIdentifier: 
   taskName: Keypad 9
-  taskDescription: Type "9" on the keypad.
+  taskDescription: Type 09 to establish communication.
   taskCompleteCondition: keypad9
   taskTime: 10
   taskDamage: 10

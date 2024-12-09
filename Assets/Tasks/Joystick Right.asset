@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Joystick Right
   m_EditorClassIdentifier: 
   taskName: Joystick
-  taskDescription: Joystick to the Right
+  taskDescription: Push Vector Vortex right to steer system.
   taskCompleteCondition: joystickRight
   taskTime: 10
   taskDamage: 10

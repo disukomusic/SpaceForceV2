@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Joystick Down
   m_EditorClassIdentifier: 
   taskName: Joystick
-  taskDescription: Joystick to the Down
+  taskDescription: Push the Vector Vortex down to descend.
   taskCompleteCondition: joystickDown
   taskTime: 10
   taskDamage: 10

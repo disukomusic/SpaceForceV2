@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 3
   m_EditorClassIdentifier: 
   taskName: Keypad 3
-  taskDescription: Type "3" on the keypad.
+  taskDescription: Type code 403 to release sensors.
   taskCompleteCondition: keypad3
   taskTime: 10
   taskDamage: 10

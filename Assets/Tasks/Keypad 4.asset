@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 4
   m_EditorClassIdentifier: 
   taskName: Keypad 4
-  taskDescription: Type "4" on the keypad.
+  taskDescription: Use code 3004 to establish location.
   taskCompleteCondition: keypad4
   taskTime: 10
   taskDamage: 10

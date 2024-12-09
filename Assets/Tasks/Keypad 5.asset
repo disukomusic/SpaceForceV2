@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 5
   m_EditorClassIdentifier: 
   taskName: Keypad 5
-  taskDescription: Type "5" on the keypad.
+  taskDescription: Type 1975 to set navigation.
   taskCompleteCondition: keypad5
   taskTime: 10
   taskDamage: 10

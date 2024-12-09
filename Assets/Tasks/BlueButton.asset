@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlueButton
   m_EditorClassIdentifier: 
   taskName: Blue Button
-  taskDescription: Press BLUE Button
+  taskDescription: Press the Blue Blaze to stabilize.
   taskCompleteCondition: blueButton
   taskTime: 10
   taskDamage: 10

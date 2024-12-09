@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 7
   m_EditorClassIdentifier: 
   taskName: Keypad 7
-  taskDescription: Type "7" on the keypad.
+  taskDescription: Type 807 to activate safety measures.
   taskCompleteCondition: keypad7
   taskTime: 10
   taskDamage: 10

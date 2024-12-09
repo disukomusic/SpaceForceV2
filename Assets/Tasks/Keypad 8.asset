@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 8
   m_EditorClassIdentifier: 
   taskName: Keypad 8
-  taskDescription: Type "8" on the keypad.
+  taskDescription: 'Type 478 to check for faults. '
   taskCompleteCondition: keypad8
   taskTime: 10
   taskDamage: 10

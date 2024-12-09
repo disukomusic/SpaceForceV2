@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedButton
   m_EditorClassIdentifier: 
   taskName: Yellow Button
-  taskDescription: Press YELLOW Button
+  taskDescription: Activate the Lunar Lever
   taskCompleteCondition: yellowButton
   taskTime: 10
   taskDamage: 10

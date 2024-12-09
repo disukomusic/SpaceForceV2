@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 1
   m_EditorClassIdentifier: 
   taskName: Keypad 1
-  taskDescription: Type "1" on the keypad.
+  taskDescription: 'Type 331 to stabilize. '
   taskCompleteCondition: keypad1
   taskTime: 10
   taskDamage: 10

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Green Button
   m_EditorClassIdentifier: 
   taskName: Green Button
-  taskDescription: Press GREEN Button
+  taskDescription: Activate the Green Gateway to initiate biofeedback sychronizing.
   taskCompleteCondition: greenButton
   taskTime: 10
   taskDamage: 10
