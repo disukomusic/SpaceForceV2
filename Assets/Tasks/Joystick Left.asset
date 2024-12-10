@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Joystick Left
   m_EditorClassIdentifier: 
   taskName: Joystick
-  taskDescription: Push Vector Vortex left to shift.
+  taskDescription: Push Glorious Grip Grabber left to shift.
   taskCompleteCondition: joystickLeft
   taskTime: 10
   taskDamage: 10

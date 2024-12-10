@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spinner Right
   m_EditorClassIdentifier: 
   taskName: Spinnner
-  taskDescription: Spin Time Warp Whizzer CounterClockwise
+  taskDescription: Spin Vector Vortex CounterClockwise
   taskCompleteCondition: spinnerRight
   taskTime: 10
   taskDamage: 10

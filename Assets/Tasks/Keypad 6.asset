@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 6
   m_EditorClassIdentifier: 
   taskName: Keypad 6
-  taskDescription: Type 206 to bypass systems.
+  taskDescription: Type 6 to bypass systems.
   taskCompleteCondition: keypad6
   taskTime: 10
   taskDamage: 10

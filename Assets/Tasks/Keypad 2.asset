@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keypad 2
   m_EditorClassIdentifier: 
   taskName: Keypad 2
-  taskDescription: Type code 352 to unlock system.
+  taskDescription: Type code 2 to unlock system.
   taskCompleteCondition: keypad2
   taskTime: 10
   taskDamage: 10

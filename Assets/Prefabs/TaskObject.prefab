@@ -167,10 +167,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 37.4
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -303,4 +303,5 @@ MonoBehaviour:
   taskDamageValue: 0
   taskDurationValue: 0
   taskTimerIcon: {fileID: 2934696552059226057}
+  t: 0
   associatedTask: {fileID: 0}

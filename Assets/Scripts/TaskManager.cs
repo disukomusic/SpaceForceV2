@@ -70,6 +70,7 @@ public class TaskManager : MonoBehaviour
             Instantiate(taskCompletePrefab, taskObject.transform.position, taskObject.transform.rotation);
             taskSoundSource.clip = taskSuccess;
             GameManager.Instance.score += 100f;
+            GameManager.Instance.UpdateScoreText();
             taskSoundSource.Play();
             Destroy(taskObject); // Remove the prefab
             taskPrefabMap.Remove(task); // Clean up the dictionary

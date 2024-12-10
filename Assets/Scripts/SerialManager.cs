@@ -7,7 +7,7 @@ public class SerialManager : MonoBehaviour
     public static SerialManager Instance; // Singleton instance
     private SerialPort sp;
     public string portName = "COM3";
-    public int baudRate = 9600;
+    public int baudRate = 115200;
 
     public event Action<string> OnDataReceived;
 
