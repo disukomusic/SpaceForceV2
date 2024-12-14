@@ -7,7 +7,7 @@ public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance;
 
-    public PanelManager[] panels;
+    public Panel[] panels;
     public Task[] tasks;
 
     public GameObject taskPrefab;
@@ -34,7 +34,7 @@ public class TaskManager : MonoBehaviour
     public void AssignTask(int panelIndex, int taskIndex)
     {
         Task task = tasks[taskIndex];
-        PanelManager panel = panels[panelIndex];
+        Panel panel = panels[panelIndex];
 
         // Check if the task is already on the board
         if (tasksOnBoard.Contains(task))
@@ -94,7 +94,7 @@ public class TaskManager : MonoBehaviour
             tasksOnBoard.Remove(task);
 
             // Find the panel containing the task and remove it from the queue.
-            foreach (PanelManager panel in panels)
+            foreach (Panel panel in panels)
             {
                 if (panel.taskQueue.Contains(task))
                 {

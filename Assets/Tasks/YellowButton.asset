@@ -15,5 +15,5 @@ MonoBehaviour:
   taskName: Yellow Button
   taskDescription: Activate the Solar Surge.
   taskCompleteCondition: yellowButton
-  taskTime: 10
+  taskTime: 5
   taskDamage: 10

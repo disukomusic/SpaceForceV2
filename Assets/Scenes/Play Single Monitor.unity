@@ -690,9 +690,9 @@ MonoBehaviour:
   - {fileID: 1720471871}
   lowHealthSound: {fileID: 459014229}
   initialMinInterval: 4
-  initialMaxInterval: 6
+  initialMaxInterval: 5
   minIntervalCap: 1
-  maxIntervalCap: 3
+  maxIntervalCap: 2
   intervalDecreaseRate: 100
   _currentMinInterval: 0
   _currentMaxInterval: 0

@@ -15,5 +15,5 @@ MonoBehaviour:
   taskName: Blue Button
   taskDescription: Press the Blue Blaze to stabilize.
   taskCompleteCondition: blueButton
-  taskTime: 10
+  taskTime: 5
   taskDamage: 10

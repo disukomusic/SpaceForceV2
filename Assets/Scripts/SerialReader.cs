@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class SerialReader : MonoBehaviour
 {
     public bool endScreen;
-    public PanelManager[] panelManagers;
+    public Panel[] panelManagers;
 
     void Start()
     {
@@ -41,12 +41,12 @@ public class SerialReader : MonoBehaviour
     IEnumerator WaitAndLoadScene()
     {
         yield return new WaitForSeconds(1f); // Wait for 1 second before loading the scene
-        SceneManager.LoadScene("Play Multi Monitor");
+        SceneManager.LoadScene("Play Single Monitor");
     }
 
     void PassDataToPanels(string data)
     {
-        foreach (PanelManager panel in panelManagers)
+        foreach (Panel panel in panelManagers)
         {
             panel.CheckTaskCompletion(data);
             Debug.Log("Passed " + data + " to " + panel.gameObject.name);
